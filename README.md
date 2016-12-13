@@ -1,5 +1,7 @@
 # NgHotWeatherWidget
 
+Это тестовый проект - домашнее задание для курса по Angular 2 от learn.javascript.ru
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.18.
 
 ## Development server
