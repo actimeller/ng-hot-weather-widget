@@ -1,0 +1,33 @@
+.app {
+  width: 600px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+  margin: 3em 0em 1em 0em;
+  font-family: 'Quicksand', sans-serif;
+}
+h2 {
+  font-size: 1.5em;
+  color: #fff;
+  margin: 20px 0;
+  font-family: 'Quicksand', sans-serif;
+  display: inline-block;
+}
+
+.city-list{
+  display: inline-block;
+}
+.city-list__item{
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.city-list__item:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,34 @@
+.about {
+  float: left;
+  width: 50%;
+  background: #fff;
+  color: #000;
+  border-radius: 6px;
+  overflow: hidden;
+  &__media {
+    width: 100%;
+    height: 200px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+  }
+  &__links {
+    background: #fda660;
+    padding: 1em 0em;
+    ul {
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      padding: 0em 0.5em;
+      border-right: 1px solid #fff;
+      &:last-of-type{
+        border: none;
+      }
+    }
+    a {
+      font-size: 1em;
+      color: #fff;
+    }
+  }
+}

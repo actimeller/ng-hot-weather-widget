@@ -1,0 +1,26 @@
+.weather {
+  float: right;
+  width: 250px;
+  background: #63B4F6;
+  color: #fff;
+
+  padding: 20px;
+  border-radius: 6px;
+  text-align: center;
+  &__title {
+    color: #fff;
+    font-size: 1em;
+  }
+  &__data{
+    img{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    span{
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 5em;
+
+    }
+  }
+}
