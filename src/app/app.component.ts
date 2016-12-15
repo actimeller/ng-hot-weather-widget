@@ -8,8 +8,7 @@ import {Component} from '@angular/core';
 
 export class AppComponent {
 
-  //todo типизировать cities
-  public cities = [
+  public cities: [{name: string, temperature: number, imageUrl: string}] = [
     {
       name: 'Moscow',
       temperature: 10,
@@ -32,7 +31,7 @@ export class AppComponent {
     this.currentCity = this.cities[0]
   }
 
-  public currentCity: any;
+  public currentCity;
 
   public chooseCity(city) {
     this.currentCity = city;
