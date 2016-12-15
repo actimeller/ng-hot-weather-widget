@@ -1,14 +1,21 @@
 import {Component} from '@angular/core';
 
+interface City {
+  name: string,
+  temperature: number,
+  imageUrl: string
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 
+
 export class AppComponent {
 
-  public cities: [{name: string, temperature: number, imageUrl: string}] = [
+  public cities: City[] = [
     {
       name: 'Moscow',
       temperature: 10,
@@ -26,17 +33,16 @@ export class AppComponent {
     },
   ];
 
-
   public constructor() {
     this.currentCity = this.cities[0]
   }
 
-  public currentCity;
+
+  public currentCity: City;
 
   public chooseCity(city) {
     this.currentCity = city;
   }
 
 
-  // public chose
 }
