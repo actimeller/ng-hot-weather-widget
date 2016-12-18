@@ -1,6 +1,6 @@
 .weather {
   float: right;
-  width: 250px;
+  width: 230px;
   background: #63B4F6;
   color: #fff;
 
@@ -19,8 +19,12 @@
     span{
       display: inline-block;
       vertical-align: middle;
-      font-size: 5em;
-
+      font-size: 3.2em;
     }
+  }
+  &__water{
+    font-size: 1em;
+    color: #fff;
+    margin: 1em 0em 0em 0em;
   }
 }

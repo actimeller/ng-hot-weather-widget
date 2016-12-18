@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-about',
@@ -7,14 +7,30 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   // входящие данные
-  @Input()
-  public currentCity;
+  @Input() public hotels;
+  @Input() public currentHotel;
+
+  // выходящие данные
+  @Output() public choseCurrentHotel: EventEmitter<{index: number}> = new EventEmitter()
 
   ngOnInit() {
 
   }
+
+  public getUrl(url: string) {
+    return `url('${url}')`
+  }
+
+  //todo: почему просто (index:number) - ошибка?
+  public chooseHotel(index: {index: number}) {
+
+    this.choseCurrentHotel.emit(index)
+    return index
+  }
+
 
 }

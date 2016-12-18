@@ -1,7 +1,6 @@
 <div class="about">
 
-  <div class="about__media" [ngStyle]="{'background-image': 'url(' + currentCity.imageUrl + ')'}"></div>
-  Выбранный город: {{currentCity.name}}
+  <div class="about__media" [ngStyle]="{'background-image': getUrl(currentHotel.image1)}"></div>
   <div class="about__links">
     <ul>
       <li><a href="#">Hotel</a></li>
@@ -12,55 +11,26 @@
   </div>
 
   <div class="village">
-    <h3>Righteous indignation &amp; like</h3>
+    <h3>Hotels</h3>
     <span class="line"> </span>
     <div class="activity_box">
       <div class="scrollbar" id="style-2">
-        <div class="activity-row">
+
+        <div *ngFor="let hotel of hotels; let i=index" (click)="chooseHotel(i)" class="activity-row" [class.js-active]="hotels[i] == currentHotel">
           <div class="activity-desc">
-            <h5>Resort Address</h5>
-            <p>Sed perspiciatis</p>
-            <p>Et harum quidem</p>
-            <h6>Tel:+1285 968 685</h6>
+            <h5>{{hotel.name}}</h5>
+            <p>{{hotel.address}}</p>
+            <h6>Tel: {{hotel.tel}}</h6>
           </div>
           <div class="activity-img">
             <ul>
-              <li><img src="assets/images/res.jpg" alt=""></li>
-              <li><img src="assets/images/r1.jpg" alt=""></li>
+              <li><img src={{hotel.image1}} alt=""></li>
+              <li><img src={{hotel.image2}} alt=""></li>
             </ul>
           </div>
           <div class="clear"></div>
         </div>
-        <div class="activity-row">
-          <div class="activity-desc">
-            <h5>Resort Address</h5>
-            <p>Sed ut perspiciatis</p>
-            <p>Et harum quidem</p>
-            <h6>Tel:+1285 968 685</h6>
-          </div>
-          <div class="activity-img">
-            <ul>
-              <li><img src="assets/images/res.jpg" alt=""></li>
-              <li><img src="assets/images/r1.jpg" alt=""></li>
-            </ul>
-          </div>
-          <div class="clear"></div>
-        </div>
-        <div class="activity-row">
-          <div class="activity-desc">
-            <h5>Resort Address</h5>
-            <p>Sed ut perspiciatis</p>
-            <p>Et harum quidem</p>
-            <h6>Tel:+1285 968 685</h6>
-          </div>
-          <div class="activity-img">
-            <ul>
-              <li><img src="assets/images/res.jpg" alt=""></li>
-              <li><img src="assets/images/r1.jpg" alt=""></li>
-            </ul>
-          </div>
-          <div class="clear"></div>
-        </div>
+
       </div>
     </div>
   </div>

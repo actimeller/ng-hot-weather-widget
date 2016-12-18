@@ -1,17 +1,8 @@
 <div class="app">
   <h1>Hot Weather Widget</h1>
 
-  <h2>Выберите город:</h2>
-
-  <ul class="city-list">
-    <li class="city-list__item" (click)="chooseCity(cities[0])">{{cities[0].name}}</li>
-    <li class="city-list__item" (click)="chooseCity(cities[1])">{{cities[1].name}}</li>
-    <li class="city-list__item" (click)="chooseCity(cities[2])">{{cities[2].name}}</li>
-  </ul>
-
-
-  <app-about [currentCity]="currentCity"></app-about>
-  <app-weather [currentCity]="currentCity"></app-weather>
-  <app-social></app-social>
+  <app-about [hotels]="hotels" [currentHotel]="currentHotel" (choseCurrentHotel)="currentHotel=hotels[$event]"></app-about>
+  <app-weather [currentHotel]="currentHotel"></app-weather>
+  <app-social [currentHotel]="currentHotel"></app-social>
 
 </div>

@@ -1,6 +1,6 @@
 .social {
   float: right;
-  width: 250px;
+  width: 230px;
   border-radius: 6px;
   text-align: center;
   overflow: hidden;
@@ -9,9 +9,24 @@
     color: #fff;
     background: #FB7C89;
     padding: 20px;
-    img {
-      border-radius: 70px;
+    &__photo {
       border: 3px solid #fff;
+      border-radius: 70px;
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      img {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        min-height: 100%;
+        min-width: 100%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
   &__follow {
@@ -25,7 +40,7 @@
       display: inline-block;
       padding: 0em 0.5em;
       border-right: 1px solid #000;
-      &:last-of-type{
+      &:last-of-type {
         border-right: none;
       }
     }

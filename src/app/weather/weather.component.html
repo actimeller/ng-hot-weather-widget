@@ -1,8 +1,19 @@
 <div class="weather">
-  <h2 class="wheather__title">Погода</h2>
+  <h2 class="wheather__title">Weather</h2>
   <span class="w-line"> </span>
   <div class="weather__data">
-    <img src="assets/images/cloudy.png" />
-    <span>{{currentCity.temperature}}<sup class="degree">°</sup></span>
+
+    <span [ngSwitch]="currentHotel.cloudiness">
+      <img *ngSwitchCase=0 src="assets/images/cloudy-0.png" width="50px"/>
+      <img *ngSwitchCase=1 src="assets/images/cloudy-1.png" width="50px"/>
+      <img *ngSwitchCase=2 src="assets/images/cloudy-2.png" width="50px"/>
+    </span>
+
+
+    <span>{{currentHotel.temperature}}<sup class="degree">°</sup></span>
   </div>
+  <div class="weather__water">
+    <span>Water {{currentHotel.water}}<sup class="degree">°</sup></span>
+  </div>
+
 </div>

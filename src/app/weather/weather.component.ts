@@ -11,7 +11,7 @@ export class WeatherComponent implements OnInit {
 
   // входящие данные
   @Input()
-  public currentCity;
+  public currentHotel;
 
   ngOnInit() {
   }
