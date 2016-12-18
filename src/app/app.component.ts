@@ -17,8 +17,8 @@ export class AppComponent {
       tel: '8 (499) 277-71-00',
       temperature: 15,
       water: 18,
-      image1: '/assets/images/hotels/moscow-1.jpg',
-      image2: '/assets/images/hotels/moscow-2.jpg',
+      image1: './assets/images/hotels/moscow-1.jpg',
+      image2: './assets/images/hotels/moscow-2.jpg',
       cloudiness: 0,
       followers: 135,
       following: 692
@@ -30,8 +30,8 @@ export class AppComponent {
       tel: '+33 1 53 43 43 00',
       temperature: 28,
       water: 23,
-      image1: '/assets/images/hotels/paris-1.jpg',
-      image2: '/assets/images/hotels/paris-2.jpg',
+      image1: './assets/images/hotels/paris-1.jpg',
+      image2: './assets/images/hotels/paris-2.jpg',
       cloudiness: 1,
       followers: 993,
       following: 736
@@ -43,8 +43,8 @@ export class AppComponent {
       tel: '+44 808 234 1953',
       temperature: 23,
       water: 0,
-      image1: '/assets/images/hotels/london-1.jpg',
-      image2: '/assets/images/hotels/london-2.jpg',
+      image1: './assets/images/hotels/london-1.jpg',
+      image2: './assets/images/hotels/london-2.jpg',
       cloudiness: 2,
       followers: 1842,
       following: 2500
