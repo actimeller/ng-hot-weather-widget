@@ -8,6 +8,8 @@ import { AboutComponent } from './about/about.component';
 import { WeatherComponent } from './weather/weather.component';
 import { SocialComponent } from './social/social.component';
 
+import {HotelsService} from './hotels.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +20,9 @@ import { SocialComponent } from './social/social.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
   ],
-  providers: [],
+  providers: [{provide: 'hotelsService', useClass: HotelsService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
