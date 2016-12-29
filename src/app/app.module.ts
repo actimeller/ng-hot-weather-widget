@@ -8,7 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { WeatherComponent } from './weather/weather.component';
 import { SocialComponent } from './social/social.component';
 
-import {HotelsService} from './hotels.service'
+import {HotelsService} from './services/hotels.service'
 
 @NgModule({
   declarations: [

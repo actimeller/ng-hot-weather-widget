@@ -16,7 +16,8 @@
     <div class="activity_box">
       <div class="scrollbar" id="style-2">
 
-        <div *ngFor="let hotel of hotels; let i=index" (click)="chooseHotel(i)" class="activity-row" [class.js-active]="hotels[i] == currentHotel">
+        <div *ngFor="let hotel of hotels; let i=index" (click)="chooseHotel(hotel)" class="activity-row">
+        <!--<div *ngFor="let hotel of hotels; let i=index" (click)="changeHotel(i)" class="activity-row" [class.js-active]="hotels[i] == currentHotel">-->
           <div class="activity-desc">
             <h5>{{hotel.name}}</h5>
             <p>{{hotel.address}}</p>
